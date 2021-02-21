@@ -57,7 +57,7 @@ class PZEM_017:
         
         if self.uVoltage not in Devices: Domoticz.Device(Unit=self.uVoltage, DeviceID="Voltage", Name=_("Voltage"), Type=243, Subtype=8, Used=1).Create()
         if self.uCurrent not in Devices: Domoticz.Device(Unit=self.uCurrent, DeviceID="Current", Name=_("Current"), Type=243, Subtype=23, Used=1).Create()
-        if self.uPower not in Devices: Domoticz.Device(Unit=self.uPower, DeviceID="Power", Name=_("Power"), Type=243, Subtype=29, Used=1).Create()
+        if self.uPower not in Devices: Domoticz.Device(Unit=self.uPower, DeviceID="Power", Name=_("Power"), Type=243, Subtype=29, SwitchType=4, Used=1).Create()
         
         return
 

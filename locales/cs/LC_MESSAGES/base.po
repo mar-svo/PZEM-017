@@ -1,0 +1,12 @@
+
+#: plugin.py:58
+msgid "Voltage"
+msgstr "Napětí"
+
+#: plugin.py:59
+msgid "Current"
+msgstr "Proud"
+
+#: plugin.py:60
+msgid "Power"
+msgstr "Energie"

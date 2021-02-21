@@ -27,14 +27,7 @@ from pymodbus.payload import BinaryPayloadDecoder
 class PZEM_017:
 
     def __init__(self):
-        
-        # TRANSLATE CMDs:
-        #   pygettext3.8 -d base -o locales/base.pot plugin.py
-        #   locales/cs/LC_MESSAGES# msgfmt -o base.mo base
-        translate = gettext.translation('base', localedir='plugins/bmr-hc64/locales', fallback=True, languages=['cs'])
-        translate.install()
-        _ = translate.gettext
-       
+    
         self.uVoltage = 1
         self.uCurrent = 2
         self.uPower = 3
@@ -42,7 +35,14 @@ class PZEM_017:
         return
 
     def onStart(self):
-                
+
+        # TRANSLATE CMDs:
+        #   pygettext3.8 -d base -o locales/base.pot plugin.py
+        #   locales/cs/LC_MESSAGES# msgfmt -o base.mo base
+        translate = gettext.translation('base', localedir='plugins/bmr-hc64/locales', fallback=True, languages=['cs'])
+        translate.install()
+        _ = translate.gettext
+
         if (Parameters["Port"] == "1"):
             Domoticz.Debugging(1)
             DumpConfigToLog()

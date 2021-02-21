@@ -3,6 +3,7 @@
     <description>
         <h3>PZEM-017 Modbus</h3>
         https://github.com/mar-svo/PZEM-017
+        Simple plugin for monitoring small photovoltaic power plant (actual current, actual voltage and actual/produced energy).
     </description>
     <params>
         <param field="SerialPort" label="SerialPort" width="140px" default="/dev/ttyUSB0"/>
